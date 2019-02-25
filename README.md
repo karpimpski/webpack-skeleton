@@ -1,3 +1,3 @@
 # webpack-skeleton
 
-A bare-bones setup for a static website including ES6 modules and SCSS.
+A basic setup for front-end web applications using my favorite tools (modern JavaScript, SCSS, and Pug).

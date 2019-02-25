@@ -1,4 +1,5 @@
-var path = require('path');
+const path              = require('path'),
+      HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -29,7 +30,18 @@ module.exports = {
             loader: 'sass-loader'
           }
         ]
+      },
+      {
+        test: /\.pug$/,
+        use: ['html-loader?attrs=false', 'pug-html-loader']
       }
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'src/index.pug',
+      inject: false
+    })
+  ]
 }
